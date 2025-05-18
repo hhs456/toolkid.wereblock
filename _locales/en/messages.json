@@ -1,0 +1,86 @@
+{
+  "extensionName": {
+    "message": "WereBlock",
+    "description": "The name of the extension."
+  },
+  "extensionDescription": {
+    "message": "A simple web blocker.",
+    "description": "The description of the extension."
+  },
+  "optionsTitle": {
+    "message": "Options",
+    "description": "Title of the options page."
+  },
+  "blockSitesTitle": {
+    "message": "Blocked Websites",
+    "description": "Title for the blocked sites list section."
+  },
+  "inputPlaceholder": {
+    "message": "Enter website address...",
+    "description": "Placeholder text for the input field."
+  },
+  "addButtonText": {
+    "message": "Add",
+    "description": "Text for the add button."
+  },
+  "removeButtonText": {
+    "message": "Remove",
+    "description": "Text for the remove button."
+  },
+  "editText": {
+    "message": "Edit",
+    "description": "Text for the edit button."
+  },
+  "saveButtonText": {
+    "message": "Save",
+    "description": "Text for the save button."
+  },
+  "cancelButtonText": {
+    "message": "Cancel",
+    "description": "Text for the cancel button."
+  },
+  "blockedPageTitle": {
+    "message": "Website Blocked",
+    "description": "Title for the blocked page."
+  },
+  "blockedPageMessage": {
+    "message": "This website has been blocked by WereBlock.",
+    "description": "Message displayed on the blocked page."
+  },
+  "blockedPageUrlLabel": {
+    "message": "Blocked URL:",
+    "description": "Label for the blocked URL on the blocked page."
+  },
+  "goBackButton": {
+    "message": "Go Back",
+    "description": "Text for the go back button on the blocked page."
+  },
+  "currentUrlLabel": {
+    "message": "Current URL:",
+    "description": "Label for the current URL in the popup."
+  },
+  "blockButtonText": {
+    "message": "Block this site",
+    "description": "Text for the button to block the current site."
+  },
+  "unblockButtonText": {
+    "message": "Unblock this site",
+    "description": "Text for the button to unblock the current site."
+  },
+  "siteBlockedStatus": {
+    "message": "This site is blocked.",
+    "description": "Status message shown when the site is blocked."
+  },
+  "siteNotBlockedStatus": {
+    "message": "This site is not blocked.",
+    "description": "Status message shown when the site is not blocked."
+  },
+  "gettingUrlError": {
+    "message": "Could not get current URL.",
+    "description": "Error message when failing to get the current URL."
+  },
+  "noBlockedSitesMessage": {
+    "message": "There are currently no blocked websites.",
+    "description": "Message displayed when there are no blocked sites."
+  }
+}

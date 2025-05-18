@@ -1,0 +1,301 @@
+/* options/options.css */
+
+/* --- 確保 body 設定基礎樣式 --- */
+body {
+  font-family: sans-serif;
+  padding: 20px;
+  width: 580px;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-y: auto;
+  /* 移除任何 background-color 的設定，讓瀏覽器控制背景色以便支援自動深色模式 */
+  /* color 設為預設文字顏色 (淺色模式下通常是深色文字) */
+  color: #333;
+}
+
+/* 這裡放置為 h1, input (非編輯狀態), button (非新增/移除/編輯/儲存/取消), ul, li 等設定的所有「預設」樣式 */
+h1 {
+  color: #333;
+  /* 淺色模式下的標題顏色 */
+}
+
+/* --- 列表項目的基礎樣式 (顯示和編輯模式) --- */
+/* 列表項目的容器，使用 Flexbox 讓內容和按鈕對齊 */
+.blocked-site-item {
+  display: flex;
+  /* 使用 Flexbox */
+  align-items: center;
+  /* 垂直居中對齊 */
+  margin-bottom: 5px;
+  /* 列表項之間的間距 */
+  padding: 5px;
+  /* 內邊距 */
+  border: 1px solid #eee;
+  /* 默認淺色邊框 */
+  border-radius: 4px;
+  /* 圓角 */
+  background-color: #f9f9f9;
+  /* 淺色背景 */
+}
+
+/* 列表項中網址文字的樣式 */
+.site-text {
+  flex-grow: 1;
+  /* 讓文字佔據大部分空間 */
+  word-break: break-all;
+  /* 長網址自動換行 */
+  margin-right: 10px;
+  /* 與後面按鈕的間距 */
+  user-select: text;
+  /* 使網址文字可選取複製 */
+  cursor: text;
+  /* 鼠標變為文本選擇樣式 */
+}
+
+/* 列表項編輯模式下的輸入框樣式 */
+.edit-input {
+  flex-grow: 1;
+  /* 讓輸入框填充空間 */
+  margin-right: 5px;
+  /* 與後面按鈕的間距 */
+  padding: 4px;
+  /* 輸入框內邊距 */
+  border: 1px solid #ccc;
+  /* 邊框 */
+  border-radius: 4px;
+  /* 圓角 */
+  /* 淺色模式下的顏色 */
+  background-color: white;
+  color: #333;
+}
+
+/* 新增的按鈕 (修改, 儲存, 取消) 的基礎樣式 */
+button {
+  border-radius: 4px;
+  border: 0px solid;
+  outline: none;
+  padding: 4px 8px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+/* 移除按鈕 (預設/淺色樣式) */
+.remove-button {
+  background-color: #ff0055;
+  color: white;
+}
+
+/* 修改按鈕 (預設/淺色樣式) */
+.edit-button {
+  background-color: #007bff;
+  color: white;
+}
+
+/* 儲存按鈕 (預設/淺色樣式) */
+.save-button {
+  background-color: #28a745;
+  color: white;
+}
+
+/* 取消按鈕 (預設/淺色樣式) */
+.cancel-button {
+  background-color: #6c757d;
+  color: white;
+}
+
+/* 清單為空時的提示文字樣式 */
+.empty-message {
+  font-style: italic;
+  color: #777;
+  text-align: center;
+}
+
+/* --- 現有樣式 --- */
+/* 為新增網址的輸入框設定預設樣式 */
+input[type="text"] {
+  border: 1px solid #777;
+  border-radius: 4px;
+  padding: 8px 12px;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border: 1px solid #007bff;
+}
+
+/* 為按鈕設定 Hover 樣式 (滑鼠懸停時) */
+button:hover {
+  background-color: #ddd;
+}
+
+/* 移除按鈕 Hover 樣式 */
+.remove-button:hover {
+  background-color: #cc0044;
+}
+
+/* 修改按鈕 Hover 樣式 */
+.edit-button:hover {
+  background-color: #0056b3;
+}
+
+/* 儲存按鈕 Hover 樣式 */
+.save-button:hover {
+  background-color: #218838;
+}
+
+/* 取消按鈕 Hover 樣式 */
+.cancel-button:hover {
+  background-color: #5a6268;
+}
+
+/* 按鈕被點擊時 (Active) - 設定點擊時的 HIGHLIGHT 效果 */
+button:active,
+#blocked-sites-list li button:active {
+  border-radius: 4px;  
+  /* 點擊時背景變暗一點 */
+  border: 0px solid;
+}
+
+.add-button:active {
+  background-color: #bbb;
+}
+
+/* 特定按鈕 Active 樣式 */
+.remove-button:active {
+  background-color: #aa0033;
+}
+
+.edit-button:active {
+  background-color: #004085;
+}
+
+.save-button:active {
+  background-color: #1e7e34;
+}
+
+.cancel-button:active {
+  background-color: #545b62;
+}
+
+/* --- 深色主題樣式 --- */
+@media (prefers-color-scheme: dark) {
+
+  /* 直接設定 body 的深色背景和文字顏色 */
+  body {
+    background-color: #23222B !important;
+    /* 深灰色背景 */
+    color: #F5F5F8 !important;
+    /* 淺色文字 */
+  }
+
+  /* 確保文本元素顏色正確，強制使用淺色 */
+  h1, p, li, span, a {
+    color: #F5F5F8 !important;
+    /* 淺色文字 */
+  }
+
+  /* --- 列表項目的深色樣式 --- */
+  .blocked-site-item {
+    background-color: #3b3b3b;
+    border-color: #555;
+  }
+
+  /* 網址文字的深色顏色 */
+  .site-text {
+    color: #F5F5F8;
+  }
+
+  /* 編輯模式下列表項的深色樣式 */
+  .blocked-site-item.editing {
+    background-color: #444;
+    border-color: #777;
+  }
+
+  /* 編輯模式下的輸入框深色樣式 */
+  .edit-input {
+    background-color: #33323A;
+    color: #F5F5F8;
+    border: 1px solid #7C7B82;
+  }
+
+  /* 輸入框的深色樣式 (閒置時) */
+  input[type="text"] {
+    background-color: #23222B;
+    color: #F5F5F8;
+    border: 1px solid #7C7B82;
+    outline: none;
+    border-radius: 4px;
+  }
+
+  /* 輸入框獲得焦點時 (輸入時) 的樣式 - 使用 Firefox 變數 */
+  input[type="text"]:focus {
+    /* 使用 Firefox 提供的焦點邊框顏色變數作為邊框色 */
+    border: 1px solid var(--in-content-focus-border-color, #00DDFF);
+    outline: none;
+    border-radius: 4px;
+  }
+
+  /* 所有按鈕的深色樣式 (閒置時) */
+  button, #blocked-sites-list li button {
+    color: #F5F5F8 !important;
+    outline: none;
+    border-radius: 4px;
+    border: 0px solid;
+  }
+
+  /* 按鈕 hover 的深色樣式 */
+
+  .add-button {
+    background-color: #33323A !important;
+  }
+
+  .add-button:hover {
+    background-color: #5a6268 !important;
+  }
+
+  .add-button:active {
+    background-color: #33323A !important;
+  }
+
+  /* 特定按鈕 Hover 樣式 */
+  .remove-button:hover {
+    background-color: #aa0055 !important;
+  }
+
+  .edit-button:hover {
+    background-color: #0055aa !important;
+  }
+
+  .save-button:hover {
+    background-color: #00aa55 !important;
+  }
+
+  .cancel-button:hover {
+    background-color: #5a6268 !important;
+  }
+
+  /* 按鈕被點擊時 (Active) 的深色樣式 */
+  button:active,
+  #blocked-sites-list li button:active {
+    outline: none;    
+  }
+
+  /* 特定按鈕 Active 樣式 */
+  .remove-button:active {
+    background-color: #990033 !important;
+  }
+
+  .edit-button:active {
+    background-color: #003a7c !important;
+  }
+
+  .save-button:active {
+    background-color: #008833 !important;
+  }
+
+  .cancel-button:active {
+    background-color: #4d5257 !important;
+  }
+}
+
+/* --- @media 區塊在這裡結束 --- */

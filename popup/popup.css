@@ -1,0 +1,132 @@
+/* popup/popup.css */
+
+/* --- 預設樣式 (適用於淺色模式) --- */
+body {
+  width: 250px;
+  /* 控制彈出小視窗的寬度 */
+  padding: 10px;
+  font-family: sans-serif;
+  margin: 0;
+  color: #333;
+  /* 預設文字顏色 (深灰色) */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* 內容居中 */
+}
+
+/* 顯示當前網址的段落 */
+#currentUrl {
+  word-break: break-all;
+  /* 長網址自動換行 */
+  margin-bottom: 10px;
+  font-size: 0.9em;
+  color: #555;
+  /* 網址顏色 (稍淺的灰色) */
+}
+
+/* 封鎖/解除封鎖按鈕 */
+#blockButton {
+  padding: 8px 12px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: #eee;
+  color: #333;
+  outline: none;
+  /* 移除預設 outline */
+}
+
+/* 解除封鎖狀態下的按鈕樣式 */
+#blockButton.unblock {
+  background-color: #fdd;
+  /* 解除封鎖按鈕的顏色 (淺紅色) */
+  border-color: #fbb;
+  color: #a00;
+  /* 解除封鎖按鈕的文字顏色 (暗紅色) */
+}
+
+/* 狀態訊息 */
+#statusMessage {
+  font-size: 0.8em;
+  color: #777;
+  /* 狀態訊息顏色 (中灰色) */
+}
+
+/* 按鈕的 hover 樣式 */
+#blockButton:hover {
+  background-color: #ddd;
+  /* Hover 時背景變暗一點 */
+}
+
+/* 按鈕的 active (點擊) 樣式 */
+#blockButton:active {
+  background-color: #bbb;
+  /* Active 時背景更暗 */
+}
+
+/* 按鈕的 focus 樣式 */
+#blockButton:focus {
+  outline: none;
+  /* 移除焦點外框 */
+}
+
+/* --- 深色主題樣式 --- */
+
+@media (prefers-color-scheme: dark) {
+
+  /* body 的深色樣式 */
+  body {
+    /* 使用瀏覽器提供的變數獲取深色背景和文字顏色，包含 fallback */
+    background-color: var(--in-content-page-background, #222) !important;
+    color: var(--in-content-text-color, #eee) !important;
+  }
+
+  /* 容器內的文本顏色 */
+  #currentUrl, #statusMessage {
+    /* 使用變數獲取淺色文字，包含 fallback */
+    color: var(--in-content-text-color, #ccc);
+  }
+
+  p, span {
+    color: var(--in-content-text-color, #eee);
+  }
+
+
+  /* 按鈕的深色樣式 (閒置時) */
+  #blockButton {
+    /* 使用變數獲取深色按鈕背景、文字、邊框，包含 fallback */
+    background-color: var(--in-content-button-background, #555);
+    color: var(--in-content-button-text-color, #eee);
+    border-color: var(--in-content-border-color, #777);
+    outline: none;
+  }
+
+  /* 解除封鎖狀態下的按鈕在深色模式下的顏色 */
+  #blockButton.unblock {
+    background-color: #a00;
+    /* 暗紅色背景 */
+    border-color: #c00;
+    color: #fff;
+    /* 淺色文字 */
+  }
+
+  /* 按鈕的深色 hover 樣式 */
+  #blockButton:hover {
+    background-color: var(--in-content-button-background-hover, #700);
+    /* Hover 時背景變亮 */
+  }
+
+  /* 按鈕的深色 active (點擊) 樣式 */
+  #blockButton:active {
+    background-color: var(--in-content-button-background-active, #900);
+    /* Active 時背景更亮 */
+  }
+
+}
+
+/* --- @media 區塊在這裡結束 --- */

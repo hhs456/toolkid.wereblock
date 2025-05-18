@@ -1,0 +1,86 @@
+{
+  "extensionName": {
+    "message": "我不亂看 (WereBlock)",
+    "description": "The name of the extension."
+  },
+  "extensionDescription": {
+    "message": "一個簡單的網站封鎖擴充功能。",
+    "description": "The description of the extension."
+  },
+  "optionsTitle": {
+    "message": "選項",
+    "description": "Title of the options page."
+  },
+  "blockSitesTitle": {
+    "message": "封鎖清單",
+    "description": "Title for the blocked sites list section."
+  },
+  "inputPlaceholder": {
+    "message": "輸入要封鎖的網址",
+    "description": "Placeholder text for the input field."
+  },
+  "addButtonText": {
+    "message": "新增",
+    "description": "Text for the add button."
+  },
+  "removeButtonText": {
+    "message": "移除",
+    "description": "Text for the remove button."
+  },
+  "editText": {
+    "message": "修改",
+    "description": "Text for the edit button."
+  },
+  "saveButtonText": {
+    "message": "保存",
+    "description": "Text for the save button."
+  },
+  "cancelButtonText": {
+    "message": "取消",
+    "description": "Text for the cancel button."
+  },
+  "blockedPageTitle": {
+    "message": "網站已被封鎖",
+    "description": "Title for the blocked page."
+  },
+  "blockedPageMessage": {
+    "message": "你欲前往的網站已被「我不亂看(WereBlock)」擴充功能封鎖！",
+    "description": "Message displayed on the blocked page."
+  },
+  "blockedPageUrlLabel": {
+    "message": "被封鎖的網址是：",
+    "description": "Label for the blocked URL on the blocked page."
+  },
+  "goBackButton": {
+    "message": "返回上一頁",
+    "description": "Text for the go back button on the blocked page."
+  },
+  "currentUrlLabel": {
+    "message": "目前的 URL:",
+    "description": "Label for the current URL in the popup."
+  },
+  "blockButtonText": {
+    "message": "封鎖這個網站",
+    "description": "Text for the button to block the current site."
+  },
+  "unblockButtonText": {
+    "message": "解鎖這個網站",
+    "description": "Text for the button to unblock the current site."
+  },
+  "siteBlockedStatus": {
+    "message": "這個網站已經被封鎖",
+    "description": "Status message shown when the site is blocked."
+  },
+  "siteNotBlockedStatus": {
+    "message": "這個網站尚未被封鎖",
+    "description": "Status message shown when the site is not blocked."
+  },
+  "gettingUrlError": {
+    "message": "無法取得目前的 URL.",
+    "description": "Error message when failing to get the current URL."
+  },
+  "noBlockedSitesMessage": {
+    "message": "目前沒有封鎖的網站",
+    "description": "Message displayed when there are no blocked sites."
+  }
+}
